@@ -35,6 +35,23 @@ namespace MakarovDev.ExpandCollapsePanel
         private readonly int _collapsedHeight;
 
         /// <summary>
+        /// Maximum Height of panel in collapsed state
+        /// </summary>
+        private int _maximumCollapseHeight;
+
+        /// <summary>
+        /// Maximum Height of panel in collapsed state
+        /// </summary>
+        [Category("ExpandCollapsePanel")]
+        [Description("Maximum Height of panel in expanded state.")]
+        [Browsable(true)]
+        public int MaximumCollapseHeight
+        {
+            get { return _maximumCollapseHeight; }
+            set { _maximumCollapseHeight = value; }
+        }
+
+        /// <summary>
         /// Height of panel in expanded state
         /// </summary>
         [Category("ExpandCollapsePanel")]
@@ -285,8 +302,7 @@ namespace MakarovDev.ExpandCollapsePanel
             base.OnSizeChanged(e);
 
             // we always manually scale expand-collapse button for filling the horizontal space of panel:
-            _btnExpandCollapse.Size = new Size(ClientSize.Width - _btnExpandCollapse.Margin.Left - _btnExpandCollapse.Margin.Right,
-                _btnExpandCollapse.Height);
+            _btnExpandCollapse.Size = new Size(ClientSize.Width - _btnExpandCollapse.Margin.Left - _btnExpandCollapse.Margin.Right,                _btnExpandCollapse.Height);
 
             // ignore height changing from animation timer
             if(_internalPanelState != InternalPanelState.Normal)
@@ -383,7 +399,7 @@ namespace MakarovDev.ExpandCollapsePanel
 
                 case InternalPanelState.Collapsing:
                     // still something to collapse
-                    if ((Height - _animationHeightAdjustment) > _collapsedHeight)
+                    if ((Height - _animationHeightAdjustment) > _collapsedHeight+50)
                     {
                         Height -= _animationHeightAdjustment;
                         // continue decreasing opacity
@@ -393,7 +409,7 @@ namespace MakarovDev.ExpandCollapsePanel
                     {
                         // we are done so we dont want any transparency
                         currOpacity = byte.MaxValue;
-                        Height = _collapsedHeight;
+                        Height = _collapsedHeight+ _maximumCollapseHeight;
                         _internalPanelState = InternalPanelState.Normal;
                     }
                     break;

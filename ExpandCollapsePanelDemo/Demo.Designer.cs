@@ -137,13 +137,15 @@
             this.expandCollapsePanel1.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Normal;
             this.expandCollapsePanel1.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.expandCollapsePanel1.Controls.Add(this.advancedFlowLayoutPanel1);
-            this.expandCollapsePanel1.ExpandedHeight = 0;
-            this.expandCollapsePanel1.IsExpanded = true;
+            this.expandCollapsePanel1.ExpandedHeight = 512;
+            this.expandCollapsePanel1.IsExpanded = false;
             this.expandCollapsePanel1.Location = new System.Drawing.Point(12, 12);
+            this.expandCollapsePanel1.MaximumCollapseHeight = 100;
             this.expandCollapsePanel1.Name = "expandCollapsePanel1";
-            this.expandCollapsePanel1.Size = new System.Drawing.Size(889, 512);
+            this.expandCollapsePanel1.Size = new System.Drawing.Size(889, 135);
             this.expandCollapsePanel1.TabIndex = 0;
             this.expandCollapsePanel1.Text = "Top expander. Click for expand the panel content and see more..";
+            this.expandCollapsePanel1.UseAnimation = true;
             this.expandCollapsePanel1.ExpandCollapse += new System.EventHandler<MakarovDev.ExpandCollapsePanel.ExpandCollapseEventArgs>(this.expandCollapsePanel1_ExpandCollapse);
             // 
             // advancedFlowLayoutPanel1
@@ -152,14 +154,16 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.advancedFlowLayoutPanel1.AutoScroll = true;
+            this.advancedFlowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.advancedFlowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.advancedFlowLayoutPanel1.Controls.Add(this.expandCollapsePanel2);
             this.advancedFlowLayoutPanel1.Controls.Add(this.expandCollapsePanel3);
             this.advancedFlowLayoutPanel1.Controls.Add(this.expandCollapsePanel4);
             this.advancedFlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.advancedFlowLayoutPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.advancedFlowLayoutPanel1.Location = new System.Drawing.Point(44, 51);
             this.advancedFlowLayoutPanel1.Name = "advancedFlowLayoutPanel1";
-            this.advancedFlowLayoutPanel1.Size = new System.Drawing.Size(825, 442);
+            this.advancedFlowLayoutPanel1.Size = new System.Drawing.Size(825, 65);
             this.advancedFlowLayoutPanel1.TabIndex = 1;
             this.advancedFlowLayoutPanel1.WrapContents = false;
             // 
@@ -177,10 +181,12 @@
             this.expandCollapsePanel2.ExpandedHeight = 0;
             this.expandCollapsePanel2.IsExpanded = true;
             this.expandCollapsePanel2.Location = new System.Drawing.Point(3, 3);
+            this.expandCollapsePanel2.MaximumCollapseHeight = 0;
             this.expandCollapsePanel2.Name = "expandCollapsePanel2";
             this.expandCollapsePanel2.Size = new System.Drawing.Size(800, 208);
             this.expandCollapsePanel2.TabIndex = 0;
             this.expandCollapsePanel2.Text = "What do you like? Buttons, don\'t you?";
+            this.expandCollapsePanel2.UseAnimation = true;
             // 
             // checkBox1
             // 
@@ -199,7 +205,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.Location = new System.Drawing.Point(34, 140);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(757, 54);
+            this.button6.Size = new System.Drawing.Size(791, 54);
             this.button6.TabIndex = 1;
             this.button6.Text = "Button with acnhors";
             this.button6.UseVisualStyleBackColor = true;
@@ -250,10 +256,12 @@
             this.expandCollapsePanel3.ExpandedHeight = 0;
             this.expandCollapsePanel3.IsExpanded = true;
             this.expandCollapsePanel3.Location = new System.Drawing.Point(3, 217);
+            this.expandCollapsePanel3.MaximumCollapseHeight = 0;
             this.expandCollapsePanel3.Name = "expandCollapsePanel3";
             this.expandCollapsePanel3.Size = new System.Drawing.Size(800, 319);
             this.expandCollapsePanel3.TabIndex = 0;
             this.expandCollapsePanel3.Text = "We want to hide more controls!";
+            this.expandCollapsePanel3.UseAnimation = true;
             // 
             // listView1
             // 
@@ -270,7 +278,7 @@
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(34, 82);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(757, 200);
+            this.listView1.Size = new System.Drawing.Size(791, 200);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -305,10 +313,12 @@
             this.expandCollapsePanel4.ExpandedHeight = 0;
             this.expandCollapsePanel4.IsExpanded = true;
             this.expandCollapsePanel4.Location = new System.Drawing.Point(3, 542);
+            this.expandCollapsePanel4.MaximumCollapseHeight = 0;
             this.expandCollapsePanel4.Name = "expandCollapsePanel4";
             this.expandCollapsePanel4.Size = new System.Drawing.Size(800, 319);
             this.expandCollapsePanel4.TabIndex = 0;
             this.expandCollapsePanel4.Text = "B...uttons";
+            this.expandCollapsePanel4.UseAnimation = true;
             // 
             // btnCollapseAll
             // 
@@ -338,10 +348,12 @@
             this.expandCollapsePanel10.ExpandedHeight = 0;
             this.expandCollapsePanel10.IsExpanded = true;
             this.expandCollapsePanel10.Location = new System.Drawing.Point(515, 209);
+            this.expandCollapsePanel10.MaximumCollapseHeight = 0;
             this.expandCollapsePanel10.Name = "expandCollapsePanel10";
             this.expandCollapsePanel10.Size = new System.Drawing.Size(222, 92);
             this.expandCollapsePanel10.TabIndex = 1;
             this.expandCollapsePanel10.Text = "just a button";
+            this.expandCollapsePanel10.UseAnimation = true;
             // 
             // button11
             // 
@@ -363,10 +375,12 @@
             this.expandCollapsePanel9.ExpandedHeight = 0;
             this.expandCollapsePanel9.IsExpanded = true;
             this.expandCollapsePanel9.Location = new System.Drawing.Point(287, 209);
+            this.expandCollapsePanel9.MaximumCollapseHeight = 0;
             this.expandCollapsePanel9.Name = "expandCollapsePanel9";
             this.expandCollapsePanel9.Size = new System.Drawing.Size(222, 92);
             this.expandCollapsePanel9.TabIndex = 1;
             this.expandCollapsePanel9.Text = "just a button";
+            this.expandCollapsePanel9.UseAnimation = true;
             // 
             // button10
             // 
@@ -388,10 +402,12 @@
             this.expandCollapsePanel8.ExpandedHeight = 0;
             this.expandCollapsePanel8.IsExpanded = true;
             this.expandCollapsePanel8.Location = new System.Drawing.Point(45, 209);
+            this.expandCollapsePanel8.MaximumCollapseHeight = 0;
             this.expandCollapsePanel8.Name = "expandCollapsePanel8";
             this.expandCollapsePanel8.Size = new System.Drawing.Size(222, 92);
             this.expandCollapsePanel8.TabIndex = 1;
             this.expandCollapsePanel8.Text = "just a button";
+            this.expandCollapsePanel8.UseAnimation = true;
             // 
             // button9
             // 
@@ -413,10 +429,12 @@
             this.expandCollapsePanel7.ExpandedHeight = 0;
             this.expandCollapsePanel7.IsExpanded = true;
             this.expandCollapsePanel7.Location = new System.Drawing.Point(515, 98);
+            this.expandCollapsePanel7.MaximumCollapseHeight = 0;
             this.expandCollapsePanel7.Name = "expandCollapsePanel7";
             this.expandCollapsePanel7.Size = new System.Drawing.Size(222, 89);
             this.expandCollapsePanel7.TabIndex = 1;
             this.expandCollapsePanel7.Text = "just a button";
+            this.expandCollapsePanel7.UseAnimation = true;
             // 
             // button8
             // 
@@ -438,10 +456,12 @@
             this.expandCollapsePanel6.ExpandedHeight = 319;
             this.expandCollapsePanel6.IsExpanded = true;
             this.expandCollapsePanel6.Location = new System.Drawing.Point(287, 98);
+            this.expandCollapsePanel6.MaximumCollapseHeight = 0;
             this.expandCollapsePanel6.Name = "expandCollapsePanel6";
             this.expandCollapsePanel6.Size = new System.Drawing.Size(222, 87);
             this.expandCollapsePanel6.TabIndex = 1;
             this.expandCollapsePanel6.Text = "just a button";
+            this.expandCollapsePanel6.UseAnimation = true;
             // 
             // button7
             // 
@@ -463,10 +483,12 @@
             this.expandCollapsePanel5.ExpandedHeight = 319;
             this.expandCollapsePanel5.IsExpanded = true;
             this.expandCollapsePanel5.Location = new System.Drawing.Point(45, 98);
+            this.expandCollapsePanel5.MaximumCollapseHeight = 0;
             this.expandCollapsePanel5.Name = "expandCollapsePanel5";
             this.expandCollapsePanel5.Size = new System.Drawing.Size(222, 87);
             this.expandCollapsePanel5.TabIndex = 1;
             this.expandCollapsePanel5.Text = "just a button";
+            this.expandCollapsePanel5.UseAnimation = true;
             // 
             // button3
             // 
